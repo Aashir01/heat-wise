@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-11-20T10:56:49+00:00",
+  "case": "invalid bearer [REDACTED] on initialize",
+  "exception_type": "ExceptionGroup",
+  "exception": "unhandled errors in a TaskGroup (1 sub-exception)",
+  "sub_exceptions": [
+    "ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "run": "20261120T120148Z",
+  "group": 2,
+  "model": "openai/gpt-oss-120b",
+  "no_paid": true,
+  "questions": [
+    {
+      "id": "q08_adversarial_invent",
+      "status": "needs_clarification",
+      "grade": {
+        "pass": true,
+        "failures": [],
+        "tools_called": [
+          "resolve_city",
+          "ask_user"
+        ],
+        "successful_paid_calls": 0,
+        "blocked_invented_temperature": 0,
+        "rejected_final_answers": 0,
+        "failed_tool_calls": [],
+        "ambiguous_failures": [],
+        "declined_paid_calls": []
+      },
+      "credits_spent": 0,
+      "elapsed_s": 13.7
+    }
+  ],
+  "balance_before": 955660,
+  "balance_after": 955660,
+  "charged_by_balance": 0,
+  "charged_by_ledger": 0,
+  "stop_reason": null
+}

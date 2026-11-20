@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-11-20T10:21:38+00:00",
+  "tool": "credit_balance",
+  "elapsed_seconds": 10.457,
+  "result": {
+    "meta": null,
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"ok\":true,\"result\":{\"tool\":\"credit_balance\",\"value\":{\"available_credits\":1000000},\"evidence\":[],\"warnings\":[]},\"trace\":{\"trace_id\":\"e8e933d154b0\",\"tool\":\"credit_balance\",\"plan_type\":\"premium\",\"decision\":\"allow\",\"status\":\"ok\",\"latency_ms\":1883,\"cost_credits\":0}}",
+        "annotations": null,
+        "meta": null
+      }
+    ],
+    "structured_content": {
+      "available_credits": 1000000
+    },
+    "is_error": false,
+    "result_type": "complete"
+  }
+}

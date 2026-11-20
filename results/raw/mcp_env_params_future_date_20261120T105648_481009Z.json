@@ -1,0 +1,48 @@
+{
+  "captured_at": "2026-11-20T10:56:48+00:00",
+  "tool": "env_params",
+  "arguments": {
+    "latitude": 33.4484,
+    "longitude": -112.074,
+    "temperature": 35,
+    "date_time": {
+      "start_date": "2026-11-21",
+      "start_time": "14:00",
+      "filter_type": 1
+    }
+  },
+  "elapsed_seconds": 5.092,
+  "result": {
+    "meta": null,
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"ok\":false,\"error\":{\"category\":\"no_coverage\",\"message\":\"Check date_time.start_date: use a YYYY-MM-DD date supported by this tool and the required local time window.\",\"retriable\":false,\"code\":\"NO_COVERAGE\",\"field\":\"date_time.start_date\"},\"trace\":{\"trace_id\":\"48320e647b1c\",\"tool\":\"env_params\",\"plan_type\":\"premium\",\"decision\":\"allow\",\"status\":\"error\",\"latency_ms\":1086,\"error\":\"no_coverage\"},\"message\":\"Check date_time.start_date: use a YYYY-MM-DD date supported by this tool and the required local time window.\"}",
+        "annotations": null,
+        "meta": null
+      }
+    ],
+    "structured_content": {
+      "ok": false,
+      "error": {
+        "category": "no_coverage",
+        "message": "Check date_time.start_date: use a YYYY-MM-DD date supported by this tool and the required local time window.",
+        "retriable": false,
+        "code": "NO_COVERAGE",
+        "field": "date_time.start_date"
+      },
+      "trace": {
+        "trace_id": "48320e647b1c",
+        "tool": "env_params",
+        "plan_type": "premium",
+        "decision": "allow",
+        "status": "error",
+        "latency_ms": 1086,
+        "error": "no_coverage"
+      },
+      "message": "Check date_time.start_date: use a YYYY-MM-DD date supported by this tool and the required local time window."
+    },
+    "is_error": true,
+    "result_type": "complete"
+  }
+}

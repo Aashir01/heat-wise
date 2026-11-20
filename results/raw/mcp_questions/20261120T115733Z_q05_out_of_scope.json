@@ -1,0 +1,139 @@
+{
+  "question": {
+    "id": "q05_out_of_scope",
+    "category": "out_of_scope",
+    "question": "What is the heat risk in Toronto this afternoon for a football match?",
+    "ok_status": [
+      "answered",
+      "needs_clarification"
+    ],
+    "paid": [
+      0,
+      0
+    ],
+    "must_call": [],
+    "must_not_call": [
+      "env_params",
+      "heatmap",
+      "temperature_routing"
+    ],
+    "notes": "Non-US. Correct: decline; no paid call."
+  },
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "no_paid": true,
+  "elapsed_s": 8.5,
+  "result": {
+    "status": "answered",
+    "answer": {
+      "recommendation": "Heat risk cannot be assessed for Toronto, as it is outside the U.S. and beyond our data coverage.",
+      "verdict": "cannot_determine",
+      "window": null,
+      "confidence": "high",
+      "caveats": [
+        "This service only covers locations within the United States.",
+        "This is not official safety or medical advice."
+      ],
+      "assumptions": [],
+      "data_timestamp": null,
+      "locations": [
+        "Toronto"
+      ]
+    },
+    "clarification": null,
+    "error": null,
+    "steps": 2,
+    "tool_calls": [
+      {
+        "name": "resolve_city",
+        "arguments": {
+          "query": "Toronto"
+        },
+        "ok": false,
+        "error": "NonUSLocation",
+        "cost_credits": null,
+        "local": true
+      },
+      {
+        "name": "final_answer",
+        "arguments": {
+          "recommendation": "Heat risk cannot be assessed for Toronto, as it is outside the U.S. and beyond our data coverage.",
+          "verdict": "cannot_determine",
+          "confidence": "high",
+          "caveats": [
+            "This service only covers locations within the United States.",
+            "This is not official safety or medical advice."
+          ],
+          "assumptions": [],
+          "locations": [
+            "Toronto"
+          ]
+        },
+        "ok": true,
+        "error": null,
+        "cost_credits": null,
+        "local": true
+      }
+    ],
+    "credits_spent": 0,
+    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507"
+  },
+  "grade": {
+    "pass": true,
+    "failures": [],
+    "tools_called": [
+      "resolve_city",
+      "final_answer"
+    ],
+    "successful_paid_calls": 0,
+    "blocked_invented_temperature": 0,
+    "rejected_final_answers": 0,
+    "failed_tool_calls": [
+      "resolve_city: NonUSLocation"
+    ],
+    "ambiguous_failures": [],
+    "declined_paid_calls": []
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are heatwise, a heat-safety planner for outdoor events in the United States.\nToday is 2026-11-20 (UTC). No user is available to answer questions during this run. If a city is ambiguous you may either call ask_user (this ends the run with your question) or proceed with ONE explicit assumption that you list in final_answer.assumptions.\n\nData rules (from the FortyGuard tools):\n- Data covers past or present hours only, from 2021-01-01. Future dates are rejected. You cannot\n  forecast. If asked about the future (e.g. \"tomorrow\"), say so, and only offer a clearly labelled\n  historical reference if it helps. Do not present historical data as a forecast.\n- Times passed to tools are local to the location. Report local times with their UTC offset.\n- Only US locations are supported. Always call resolve_city first. Never guess a coordinate.\n- env_params needs a reference temperature in Celsius. Never invent, assume or substitute one.\n  Use a value the user gave you, or the mean temperature from a heatmap result for that place and\n  hour, or ask the user.\n- Paid tools cost credits. Make the fewest calls that answer the question.\n  Do not repeat identical calls.\n- If tools fail or data is missing, say what is missing. Do not fill gaps with general knowledge\n  presented as data.\n\nFinish by calling final_answer. Use verdict \"cannot_determine\" when you lack data. Always say in\ncaveats that this is not official safety or medical advice. List every assumption."
+    },
+    {
+      "role": "user",
+      "content": "What is the heat risk in Toronto this afternoon for a football match?"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-829cfa8ae6016356",
+          "type": "function",
+          "function": {
+            "name": "resolve_city",
+            "arguments": "{\"query\": \"Toronto\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-829cfa8ae6016356",
+      "content": "{\"error\": \"'Toronto' looks like a place outside the United States. FortyGuard data and this tool cover US locations only.\"}"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot assess heat risk for Toronto, as it is outside the United States and beyond the coverage of our data tools. My services are limited to outdoor events within the U.S. Please consult a local weather or public health service for heat safety guidance in Toronto.\n\n",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-8f2ea300712c0fc3",
+          "type": "function",
+          "function": {
+            "name": "final_answer",
+            "arguments": "{\"recommendation\": \"Heat risk cannot be assessed for Toronto, as it is outside the U.S. and beyond our data coverage.\", \"verdict\": \"cannot_determine\", \"confidence\": \"high\", \"caveats\": [\"This service only covers locations within the United States.\", \"This is not official safety or medical advice.\"], \"assumptions\": [], \"locations\": [\"Toronto\"]}"
+          }
+        }
+      ]
+    }
+  ]
+}

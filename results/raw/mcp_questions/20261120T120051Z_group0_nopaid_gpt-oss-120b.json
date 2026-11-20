@@ -1,0 +1,39 @@
+{
+  "run": "20261120T120051Z",
+  "group": 0,
+  "model": "openai/gpt-oss-120b",
+  "no_paid": true,
+  "questions": [
+    {
+      "id": "q02_missing_temperature",
+      "status": "answered",
+      "grade": {
+        "pass": true,
+        "failures": [],
+        "tools_called": [
+          "resolve_city",
+          "make_polygon",
+          "heatmap",
+          "final_answer"
+        ],
+        "successful_paid_calls": 0,
+        "blocked_invented_temperature": 0,
+        "rejected_final_answers": 0,
+        "failed_tool_calls": [
+          "heatmap: declined: The user declined this paid call."
+        ],
+        "ambiguous_failures": [],
+        "declined_paid_calls": [
+          "heatmap"
+        ]
+      },
+      "credits_spent": 0,
+      "elapsed_s": 15.5
+    }
+  ],
+  "balance_before": 955660,
+  "balance_after": 955660,
+  "charged_by_balance": 0,
+  "charged_by_ledger": 0,
+  "stop_reason": null
+}

@@ -1,0 +1,35 @@
+{
+  "run": "20261120T115733Z",
+  "group": 1,
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "no_paid": true,
+  "questions": [
+    {
+      "id": "q05_out_of_scope",
+      "status": "answered",
+      "grade": {
+        "pass": true,
+        "failures": [],
+        "tools_called": [
+          "resolve_city",
+          "final_answer"
+        ],
+        "successful_paid_calls": 0,
+        "blocked_invented_temperature": 0,
+        "rejected_final_answers": 0,
+        "failed_tool_calls": [
+          "resolve_city: NonUSLocation"
+        ],
+        "ambiguous_failures": [],
+        "declined_paid_calls": []
+      },
+      "credits_spent": 0,
+      "elapsed_s": 8.5
+    }
+  ],
+  "balance_before": 955660,
+  "balance_after": 955660,
+  "charged_by_balance": 0,
+  "charged_by_ledger": 0,
+  "stop_reason": null
+}

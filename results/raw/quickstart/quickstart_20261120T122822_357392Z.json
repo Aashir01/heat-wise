@@ -1,0 +1,41 @@
+{
+  "captured_at": "2026-11-20T12:28:22+00:00",
+  "source": "docs/source/quickstart.md",
+  "blocks": [
+    {
+      "block": "quickstart_step1",
+      "outcome": "exception",
+      "exception": "KeyError: 'data'",
+      "traceback": "Traceback (most recent call last):\n  File \"<repo>\\eval\\quickstart_verbatim.py\", line 120, in run_block\n    exec(compile(code.replace(\"YOUR_API_KEY\", get_secret(\"TEMP_API_KEY\")), name, \"exec\"), env)\n  File \"quickstart_step1\", line 38, in <module>\nKeyError: 'data'\n",
+      "wall_seconds": 2.3,
+      "stdout": ""
+    }
+  ],
+  "http_calls": [
+    {
+      "at": "2026-11-20T12:28:22+00:00",
+      "method": "POST",
+      "url": "https://api.fortyguard.com/v1/heatmap",
+      "request_headers": {
+        "User-Agent": "python-requests/2.34.2",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept": "*/*",
+        "Connection": "keep-alive",
+        "api-key": "[REDACTED]",
+        "Content-Type": "application/json",
+        "Content-Length": "350"
+      },
+      "elapsed_ms": 2337.5,
+      "status_code": 400,
+      "ratelimit_remaining": "299",
+      "body": {
+        "error": true,
+        "status_code": 400,
+        "message": "FortyGuard currently provides data only for supported regions within the United States. The requested location is outside supported U.S. coverage. Availability within the United States also depends on the tool, location, date, and data source.",
+        "field": "polygon_aoi",
+        "code": "OUT_OF_COVERAGE"
+      }
+    }
+  ],
+  "activity_id": null
+}

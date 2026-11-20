@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-11-20T10:33:35+00:00",
+  "request": {
+    "method": "POST",
+    "url": "https://api.fortyguard.com/v1/env_params",
+    "headers": {
+      "api-key": "[REDACTED]",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "latitude": 33.4484,
+      "longitude": -112.074,
+      "temperature": 35,
+      "date_time": {
+        "start_date": "2026-11-21",
+        "start_time": "14:00",
+        "filter_type": 1
+      }
+    }
+  },
+  "response": {
+    "status_code": 400,
+    "elapsed_seconds": 1.742,
+    "headers": {
+      "server": "envoy",
+      "date": "Fri, 20 Nov 2026 10:33:34 GMT",
+      "content-type": "application/json",
+      "x-ratelimit-limit": "300",
+      "x-ratelimit-remaining": "299",
+      "x-ratelimit-reset": "1795170840",
+      "x-envoy-upstream-service-time": "637",
+      "content-encoding": "gzip",
+      "vary": "Accept-Encoding",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "error": true,
+      "status_code": 400,
+      "message": "Field 'date_time.start_date' (2026-11-21) is in the future. Requests must be for a past or present date.",
+      "field": "date_time.start_date",
+      "code": "NO_COVERAGE"
+    }
+  }
+}

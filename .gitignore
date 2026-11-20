@@ -1,0 +1,26 @@
+# Secrets and local state
+.env
+.env.*
+!.env.example
+*.key
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# FortyGuard's own content (not redistributed)
+docs/source/
+results/**/*.pdf
+results/raw/report_pdf_text_*.json
+
+# Private working files
+feedback/SUPPORT_EMAIL_F22.md
+feedback/DRAFT.md
+
+# Agent session traces (LLM conversations; not needed to reproduce the findings)
+results/sessions/

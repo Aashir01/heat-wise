@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-11-20T11:23:49+00:00",
+  "cases": [
+    {
+      "idle_seconds": 0.0,
+      "outcome": "failed",
+      "errors": [
+        "MCPError: Connection closed"
+      ]
+    },
+    {
+      "idle_seconds": 15.0,
+      "outcome": "failed",
+      "errors": [
+        "ConnectError: [Errno 11001] getaddrinfo failed"
+      ]
+    },
+    {
+      "idle_seconds": 45.0,
+      "outcome": "failed",
+      "errors": [
+        "ConnectError: [Errno 11001] getaddrinfo failed"
+      ]
+    }
+  ]
+}

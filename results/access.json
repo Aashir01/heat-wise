@@ -1,0 +1,28 @@
+{
+  "credits": {
+    "status": "error",
+    "status_code": 404,
+    "path_tried": "/credits",
+    "checked_at": "2026-11-20T10:18:59+00:00"
+  },
+  "env_params": {
+    "status": "ok",
+    "status_code": 200,
+    "checked_at": "2026-11-20T10:22:53+00:00"
+  },
+  "heatmap": {
+    "status": "ok",
+    "status_code": 200,
+    "checked_at": "2026-11-20T10:23:15+00:00"
+  },
+  "routing": {
+    "status": "ok",
+    "status_code": 200,
+    "checked_at": "2026-11-20T10:44:15+00:00"
+  },
+  "heat_intelligence": {
+    "status": "ok",
+    "status_code": 200,
+    "checked_at": "2026-11-20T10:45:57+00:00"
+  }
+}

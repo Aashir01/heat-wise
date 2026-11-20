@@ -1,0 +1,27 @@
+id,surface,status_code,is_error,accepted,code,field,category,retriable,actionable,elapsed_ms,body_shape,message
+rest_missing_key,rest,401,,False,,,,,True,1291.4,"details,error,status_code",Missing required 'api-key' header. Send your key in the 'api-key' request header.
+rest_invalid_key,rest,401,,False,,,,,True,1110.7,"details,error,status_code",Invalid or unknown API key.
+rest_malformed_json,rest,422,,False,,18,,,True,1472.1,"detail,error,field,message,status_code",Field '18' is invalid: JSON decode error
+rest_missing_temperature,rest,422,,False,,temperature,,,True,3282.6,"detail,error,field,message,status_code",Field 'temperature' is required.
+rest_latitude_out_of_range,rest,422,,False,,latitude,,,True,1308.8,"detail,error,field,message,status_code",Field 'latitude' is invalid: Input should be less than or equal to 90
+rest_temperature_as_string,rest,422,,False,,temperature,,,True,1250.4,"detail,error,field,message,status_code","Field 'temperature' is invalid: Input should be a valid number, unable to parse string as a number"
+rest_bad_filter_type,rest,422,,False,,date_time.filter_type,,,True,1482.2,"detail,error,field,message,status_code","Field 'date_time.filter_type' is invalid: Input should be 1, 2, 3 or 4"
+rest_bad_date_format,rest,500,,False,,,,,False,1703.8,"error,message","Something went wrong on our side. Please try again in a moment, or contact support@fortyguard.com if it keeps failing."
+rest_missing_start_time_for_single_hour,rest,500,,False,,,,,False,4155.4,"error,message","Something went wrong on our side. Please try again in a moment, or contact support@fortyguard.com if it keeps failing."
+rest_future_date,rest,400,,False,NO_COVERAGE,date_time.start_date,,,True,1512.3,"code,error,field,message,status_code",Field 'date_time.start_date' (2027-01-01) is in the future. Requests must be for a past or present date.
+rest_non_us_london,rest,400,,False,OUT_OF_COVERAGE,latitude,,,True,1117.6,"code,error,field,message,status_code","FortyGuard currently provides data only for supported regions within the United States. The requested location is outside supported U.S. coverage. Availability within the United States also depends on the tool, location, date, and data source."
+rest_huge_range_days,rest,500,,False,,,,,False,1940.8,"error,message","Something went wrong on our side. Please try again in a moment, or contact support@fortyguard.com if it keeps failing."
+rest_heatmap_huge_polygon,rest,400,,False,,,,,True,1552.7,"error,message",Heatmap size exceeds current model limit of 50 mi² /129.5 km²
+rest_unknown_endpoint,rest,404,,False,,,,,False,1131.2,"details,error,status_code",Endpoint not found
+rest_wrong_method,rest,405,,False,,,,,True,1342.2,detail,Method Not Allowed
+rest_status_unknown_activity,rest,404,,False,,,,,False,1597.6,"details,error,status_code",No activity found for the provided activity_id.
+rest_status_garbage_id,rest,404,,False,,,,,False,1499.9,"details,error,status_code",No activity found for the provided activity_id.
+mcp_missing_temperature,mcp,,True,False,,temperature,invalid_input,False,False,3834.8,"error,message,ok,trace",The request input is invalid.
+mcp_latitude_out_of_range,mcp,,True,False,,latitude,invalid_input,False,False,2495.6,"error,message,ok,trace",The request input is invalid.
+mcp_bad_filter_type,mcp,,True,False,,date_time.filter_type,invalid_input,False,False,2901.6,"error,message,ok,trace",The request input is invalid.
+mcp_bad_date_format,mcp,,True,False,,date_time.start_date,invalid_input,False,False,2339.6,"error,message,ok,trace",The request input is invalid.
+mcp_before_2021,mcp,,True,False,,date_time.start_date,invalid_input,False,True,2099.4,"error,message,ok,trace",start_date must be on or after 2021-01-01
+mcp_non_us_london,mcp,,True,False,OUT_OF_COVERAGE,latitude,no_coverage,False,True,2537.4,"error,message,ok,trace","FortyGuard currently provides data only for supported regions within the United States. The requested location is outside supported U.S. coverage. Availability within the United States also depends on the tool, location, date, and data source."
+mcp_unknown_tool,mcp,,True,False,,,,,False,1952.9,str,Unknown tool: 'not_a_tool'
+mcp_heatmap_read_unknown_id,mcp,,True,False,ACTIVITY_UNAVAILABLE,,denied,False,False,3870.6,"error,message,ok,trace",Activity not found or unavailable to this account. Check the activity ID and try again.
+mcp_routing_same_origin_destination,mcp,,True,False,,,invalid_input,False,False,1898.2,"error,message,ok,trace",The request input is invalid.

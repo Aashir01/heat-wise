@@ -1,0 +1,15 @@
+{"at": "2026-11-20T10:32:08+00:00", "tool": "env_params+env_params+heatmap", "credits": 10020, "note": "Task 1 probes; verified by credit_balance 1,000,000 -> 989,980"}
+{"at": "2026-11-20T10:34:34+00:00", "tool": "routing", "credits": 3500, "note": "routing probe; verified 989,980 -> 986,480; rejected forecast call cost 0"}
+{"at": "2026-11-20T10:49:21+00:00", "tool": "routing", "credits": 3500, "note": "same-hour routing cross-check (Nov 17 14:00 local)"}
+{"at": "2026-11-20T10:49:21+00:00", "tool": "heat_intelligence", "credits": 8600, "note": "report unit check, temperature=95"}
+{"at": "2026-11-20T10:49:21+00:00", "tool": "env_params", "credits": 0, "note": "date-bound probe 2020-06-15 rejected, free"}
+{"at": "2026-11-20T10:56:16+00:00", "tool": "mcp env_params", "credits": 2900, "note": "MCP env_params day request (filter_type 3), verified 974,380 -> 971,480"}
+{"at": "2026-11-20T11:13:30+00:00", "tool": "env_params", "credits": 2900, "note": "agent call"}
+{"at": "2026-11-20T11:17:43+00:00", "tool": "env_params", "credits": 2900, "note": "agent demo run 1 (result delivered), verified by credit_balance"}
+{"at": "2026-11-20T11:17:43+00:00", "tool": "env_params", "credits": 2900, "note": "agent demo run 2: MCPError 'SSE stream ended without a response' but CHARGED; 971,480 -> 965,680 over runs 1+2"}
+{"at": "2026-11-20T11:17:54+00:00", "tool": "correction", "credits": -2900, "note": "removes duplicate entry for agent demo run 1 (already recorded automatically)"}
+{"at": "2026-11-20T11:20:21+00:00", "tool": "env_params", "credits": 2900, "note": "UNCERTAIN: failed in transit, assumed charged"}
+{"at": "2026-11-20T11:49:41+00:00", "tool": "heatmap", "credits": 4220, "note": "mcp_questions q02_missing_temperature Qwen/Qwen3-235B-A22B-Instruct-2507"}
+{"at": "2026-11-20T11:54:28+00:00", "tool": "env_params", "credits": 2900, "note": "mcp_questions q04_multi_city Qwen/Qwen3-235B-A22B-Instruct-2507 UNCERTAIN: failed in transit, assumed charged"}
+{"at": "2026-11-20T12:29:34+00:00", "tool": "heatmap", "credits": 0, "note": "quickstart verbatim: rejected 400 OUT_OF_COVERAGE, free; balance 955,660 unchanged"}
+{"at": "2026-11-20T12:37:39+00:00", "tool": "env_params", "credits": 2900, "note": "F-29 follow-up: Manhattan env_params 2026-11-17 14:00, completed; verified 955,660 -> 952,760"}

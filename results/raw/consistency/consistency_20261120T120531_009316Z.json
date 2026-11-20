@@ -1,0 +1,227 @@
+{
+  "generated_at": "2026-11-20T12:05:30+00:00",
+  "sources": {
+    "reference_temperature_dependence": [
+      "env_params_phoenix_past_status_last.json",
+      "env_params_phoenix_past_ref25_status_last.json"
+    ],
+    "same_hour_rest_vs_mcp": [
+      "env_params_phoenix_past_status_last.json",
+      "mcp_env_params_phoenix_day_20261120T105524_027750Z.json"
+    ],
+    "mcp_vs_rest_reread": [
+      "mcp_env_params_phoenix_day_20261120T105524_027750Z.json",
+      "retrieval_rest_status_of_mcp_env_20261120T113724_707134Z.json"
+    ],
+    "cross_product_same_hour": [
+      "env_params_phoenix_past_status_last.json",
+      "heatmap_status_last.json",
+      "routing_past_1400local_status_poll05_20261120T104443_424300Z.json",
+      "q02_heatmap_read_after_20261120T115143_665631Z.json"
+    ]
+  },
+  "checks": {
+    "reference_temperature_dependence": {
+      "inputs": [
+        35.0,
+        25.0
+      ],
+      "differing_parameters": {
+        "heat_index_celsius": [
+          [
+            38.7
+          ],
+          [
+            25.7
+          ]
+        ]
+      },
+      "identical_parameters": 14,
+      "total_parameters": 15
+    },
+    "same_hour_rest_vs_mcp": {
+      "hour": "2026-11-17T14:00:00-07:00",
+      "compared": 15,
+      "equal": 15,
+      "values": {
+        "heat_index_celsius": {
+          "rest_single_hour": 38.7,
+          "mcp_day_series": 38.7,
+          "equal": true
+        },
+        "apparent_temperature_celsius": {
+          "rest_single_hour": 17.9,
+          "mcp_day_series": 17.9,
+          "equal": true
+        },
+        "relative_humidity_percent": {
+          "rest_single_hour": 44.7,
+          "mcp_day_series": 44.7,
+          "equal": true
+        },
+        "precipitation_mm": {
+          "rest_single_hour": 0.0,
+          "mcp_day_series": 0.0,
+          "equal": true
+        },
+        "cloud_cover_octas": {
+          "rest_single_hour": 5,
+          "mcp_day_series": 5,
+          "equal": true
+        },
+        "wet_bulb_temperature_celsius": {
+          "rest_single_hour": 13.7,
+          "mcp_day_series": 13.7,
+          "equal": true
+        },
+        "air_quality:idx": {
+          "rest_single_hour": 52.1,
+          "mcp_day_series": 52.1,
+          "equal": true
+        },
+        "air_quality_pm2p5:idx": {
+          "rest_single_hour": 52.1,
+          "mcp_day_series": 52.1,
+          "equal": true
+        },
+        "air_quality_pm10:idx": {
+          "rest_single_hour": 24.8,
+          "mcp_day_series": 24.8,
+          "equal": true
+        },
+        "air_quality_no2:idx": {
+          "rest_single_hour": 1.3,
+          "mcp_day_series": 1.3,
+          "equal": true
+        },
+        "aqi_us_co": {
+          "rest_single_hour": 1.2,
+          "mcp_day_series": 1.2,
+          "equal": true
+        },
+        "air_quality_o3:idx": {
+          "rest_single_hour": 25.8,
+          "mcp_day_series": 25.8,
+          "equal": true
+        },
+        "air_quality_so2:idx": {
+          "rest_single_hour": 0.3,
+          "mcp_day_series": 0.3,
+          "equal": true
+        },
+        "methane_ppb": {
+          "rest_single_hour": 2023.5,
+          "mcp_day_series": 2023.5,
+          "equal": true
+        },
+        "co2_ppm": {
+          "rest_single_hour": 444.0,
+          "mcp_day_series": 444.0,
+          "equal": true
+        }
+      },
+      "first_hour_snapshot_apparent_c": 18.6,
+      "hour_14_apparent_c": 17.9
+    },
+    "mcp_vs_rest_reread": {
+      "identical": true,
+      "parameters_identical": true
+    },
+    "cross_product_same_hour": {
+      "place_hour": "Phoenix, 2026-11-17 14:00 local (America/Phoenix, UTC-7)",
+      "env_params_apparent_c": 17.9,
+      "env_params_wet_bulb_c": 13.7,
+      "heatmap_tcm_min_c": 19.0663,
+      "heatmap_tcm_max_c": 19.3131,
+      "heatmap_tcm_mean_c": 19.185358333333333,
+      "routing_mean_c": 41.814,
+      "routing_peak_c": 41.96,
+      "routing_minus_heatmap_max_c": 22.5,
+      "heatmap_15h_mcp_mean_c": 19.967789234449757
+    },
+    "sanity": [
+      {
+        "source": "env_params_phoenix_past_status_last.json",
+        "kind": "rest",
+        "timezone": "America/Phoenix",
+        "offset": "-07:00",
+        "timestamps_match_offset": true,
+        "array_lengths_match_count": true,
+        "n_values": 15,
+        "out_of_range": [],
+        "nulls": 0,
+        "legacy_minus_999": 0
+      },
+      {
+        "source": "env_params_phoenix_past_ref25_status_last.json",
+        "kind": "rest",
+        "timezone": "America/Phoenix",
+        "offset": "-07:00",
+        "timestamps_match_offset": true,
+        "array_lengths_match_count": true,
+        "n_values": 15,
+        "out_of_range": [],
+        "nulls": 0,
+        "legacy_minus_999": 0
+      },
+      {
+        "source": "mcp_env_params_phoenix_day_20261120T105524_027750Z.json",
+        "kind": "mcp_day",
+        "timezone": "America/Phoenix",
+        "offset": "-07:00",
+        "timestamps_match_offset": true,
+        "array_lengths_match_count": true,
+        "n_values": 360,
+        "out_of_range": [],
+        "nulls": 0,
+        "legacy_minus_999": 0
+      },
+      {
+        "source": "retrieval_rest_status_of_mcp_env_20261120T113724_707134Z.json",
+        "kind": "rest_reread",
+        "timezone": "America/Phoenix",
+        "offset": "-07:00",
+        "timestamps_match_offset": true,
+        "array_lengths_match_count": true,
+        "n_values": 360,
+        "out_of_range": [],
+        "nulls": 0,
+        "legacy_minus_999": 0
+      }
+    ]
+  },
+  "range_rules": {
+    "relative_humidity_percent": [
+      0,
+      100
+    ],
+    "cloud_cover_octas": [
+      0,
+      8
+    ],
+    "precipitation_mm": [
+      0,
+      500
+    ],
+    "apparent_temperature_celsius": [
+      -60,
+      60
+    ],
+    "wet_bulb_temperature_celsius": [
+      -60,
+      40
+    ],
+    "heat_index_celsius": [
+      -60,
+      80
+    ],
+    "methane_ppb": [
+      1000,
+      3000
+    ],
+    "co2_ppm": [
+      300,
+      600
+    ]
+  }
+}

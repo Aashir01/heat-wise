@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-11-20T10:45:11+00:00",
+  "request": {
+    "method": "POST",
+    "url": "https://api.fortyguard.com/v1/env_params",
+    "headers": {
+      "api-key": "[REDACTED]",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "latitude": 33.4484,
+      "longitude": -112.074,
+      "temperature": 35,
+      "date_time": {
+        "start_date": "2020-06-15",
+        "start_time": "14:00",
+        "filter_type": 1
+      }
+    }
+  },
+  "response": {
+    "status_code": 400,
+    "elapsed_seconds": 1.401,
+    "headers": {
+      "server": "envoy",
+      "date": "Fri, 20 Nov 2026 10:45:11 GMT",
+      "content-type": "application/json",
+      "x-ratelimit-limit": "300",
+      "x-ratelimit-remaining": "299",
+      "x-ratelimit-reset": "1795171560",
+      "x-envoy-upstream-service-time": "513",
+      "content-encoding": "gzip",
+      "vary": "Accept-Encoding",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "error": true,
+      "status_code": 400,
+      "message": "Field 'date_time.start_date' (2020-06-15) is before the earliest supported date (2021-01-01). This request date is not accepted; available data may start later or vary by source.",
+      "field": "date_time.start_date",
+      "code": "NO_COVERAGE"
+    }
+  }
+}

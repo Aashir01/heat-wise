@@ -1,0 +1,76 @@
+{
+  "run": "20261120T114912Z",
+  "group": 0,
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "questions": [
+    {
+      "id": "q01_ambiguous_city",
+      "status": "needs_clarification",
+      "grade": {
+        "pass": true,
+        "failures": [],
+        "tools_called": [
+          "resolve_city",
+          "ask_user"
+        ],
+        "successful_paid_calls": 0,
+        "blocked_invented_temperature": 0,
+        "rejected_final_answers": 0,
+        "failed_tool_calls": [],
+        "ambiguous_failures": []
+      },
+      "credits_spent": 0,
+      "elapsed_s": 8.7
+    },
+    {
+      "id": "q02_missing_temperature",
+      "status": "answered",
+      "grade": {
+        "pass": true,
+        "failures": [],
+        "tools_called": [
+          "resolve_city",
+          "env_params",
+          "heatmap",
+          "heatmap_read",
+          "heatmap_read",
+          "heatmap_read",
+          "final_answer"
+        ],
+        "successful_paid_calls": 1,
+        "blocked_invented_temperature": 1,
+        "rejected_final_answers": 0,
+        "failed_tool_calls": [
+          "env_params: reference_temperature_not_sourced"
+        ],
+        "ambiguous_failures": []
+      },
+      "credits_spent": 4220,
+      "elapsed_s": 22.9
+    },
+    {
+      "id": "q03_future_date",
+      "status": "needs_clarification",
+      "grade": {
+        "pass": true,
+        "failures": [],
+        "tools_called": [
+          "resolve_city",
+          "ask_user"
+        ],
+        "successful_paid_calls": 0,
+        "blocked_invented_temperature": 0,
+        "rejected_final_answers": 0,
+        "failed_tool_calls": [],
+        "ambiguous_failures": []
+      },
+      "credits_spent": 0,
+      "elapsed_s": 9.3
+    }
+  ],
+  "balance_before": 962780,
+  "balance_after": 958560,
+  "charged_by_balance": 4220,
+  "charged_by_ledger": 4220,
+  "stop_reason": null
+}

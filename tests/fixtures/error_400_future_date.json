@@ -1,0 +1,7 @@
+{
+ "error": true,
+ "status_code": 400,
+ "message": "Field 'date_time.start_date' (2026-11-21) is in the future. Requests must be for a past or present date.",
+ "field": "date_time.start_date",
+ "code": "NO_COVERAGE"
+}

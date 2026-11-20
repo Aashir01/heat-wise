@@ -1,0 +1,54 @@
+[project]
+name = "heatwise"
+version = "0.1.0"
+description = "Heat-safe outdoor event planner built on the FortyGuard Temperature MCP and API"
+requires-python = ">=3.11"
+dependencies = [
+  "httpx>=0.27",
+  "mcp>=1.2",
+  "openai>=1.40",
+  "pydantic>=2.7",
+  "python-dotenv>=1.0",
+  "structlog>=24.1",
+]
+
+[project.optional-dependencies]
+dev = ["matplotlib>=3.9", "pypdf>=5", "pytest>=8", "pytest-asyncio>=0.23", "respx>=0.21", "ruff>=0.5", "mypy>=1.10"]
+
+[project.scripts]
+heatwise = "heatwise.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/heatwise"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests", "eval"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "ASYNC", "S"]
+ignore = ["S101", "ASYNC109"]  # assert in tests; explicit timeout params are intentional
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S105", "S106"]
+"eval/*" = ["S", "E501", "SIM117", "ASYNC240"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src"]
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["mcp.*", "httpx2.*"]
+ignore_missing_imports = true

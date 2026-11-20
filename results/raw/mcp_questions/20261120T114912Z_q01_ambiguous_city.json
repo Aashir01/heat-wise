@@ -1,0 +1,120 @@
+{
+  "question": {
+    "id": "q01_ambiguous_city",
+    "category": "ambiguous",
+    "question": "Is 2pm on 2026-11-17 OK for an outdoor market in Portland? It was 12C.",
+    "ok_status": [
+      "needs_clarification",
+      "answered"
+    ],
+    "paid": [
+      0,
+      1
+    ],
+    "must_call": [
+      "resolve_city"
+    ],
+    "must_not_call": [],
+    "notes": "Pass needs a clarifying question, or an answer whose assumptions name which Portland (enforced by the agent)."
+  },
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "elapsed_s": 8.7,
+  "result": {
+    "status": "needs_clarification",
+    "answer": null,
+    "clarification": {
+      "question": "Please specify which Portland you mean: Portland, ME or Portland, OR?",
+      "options": []
+    },
+    "error": null,
+    "steps": 3,
+    "tool_calls": [
+      {
+        "name": "resolve_city",
+        "arguments": {
+          "query": "Portland"
+        },
+        "ok": true,
+        "error": null,
+        "cost_credits": null,
+        "local": true
+      },
+      {
+        "name": "ask_user",
+        "arguments": {
+          "question": "Please specify which Portland you mean: Portland, ME or Portland, OR?"
+        },
+        "ok": true,
+        "error": null,
+        "cost_credits": null,
+        "local": true
+      }
+    ],
+    "credits_spent": 0,
+    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507"
+  },
+  "grade": {
+    "pass": true,
+    "failures": [],
+    "tools_called": [
+      "resolve_city",
+      "ask_user"
+    ],
+    "successful_paid_calls": 0,
+    "blocked_invented_temperature": 0,
+    "rejected_final_answers": 0,
+    "failed_tool_calls": [],
+    "ambiguous_failures": []
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are heatwise, a heat-safety planner for outdoor events in the United States.\nToday is 2026-11-20 (UTC). No user is available to answer questions during this run. If a city is ambiguous you may either call ask_user (this ends the run with your question) or proceed with ONE explicit assumption that you list in final_answer.assumptions.\n\nData rules (from the FortyGuard tools):\n- Data covers past or present hours only, from 2021-01-01. Future dates are rejected. You cannot\n  forecast. If asked about the future (e.g. \"tomorrow\"), say so, and only offer a clearly labelled\n  historical reference if it helps. Do not present historical data as a forecast.\n- Times passed to tools are local to the location. Report local times with their UTC offset.\n- Only US locations are supported. Always call resolve_city first. Never guess a coordinate.\n- env_params needs a reference temperature in Celsius. Never invent, assume or substitute one.\n  Use a value the user gave you, or the mean temperature from a heatmap result for that place and\n  hour, or ask the user.\n- Paid tools cost credits. Make the fewest calls that answer the question.\n  Do not repeat identical calls.\n- If tools fail or data is missing, say what is missing. Do not fill gaps with general knowledge\n  presented as data.\n\nFinish by calling final_answer. Use verdict \"cannot_determine\" when you lack data. Always say in\ncaveats that this is not official safety or medical advice. List every assumption."
+    },
+    {
+      "role": "user",
+      "content": "Is 2pm on 2026-11-17 OK for an outdoor market in Portland? It was 12C."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-a23ece9dc02d50fc",
+          "type": "function",
+          "function": {
+            "name": "resolve_city",
+            "arguments": "{\"query\": \"Portland\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "chatcmpl-tool-a23ece9dc02d50fc",
+      "content": "{\"ambiguous\": true, \"matches\": [{\"label\": \"Portland, ME\", \"latitude\": 43.6591, \"longitude\": -70.2568, \"timezone\": \"America/New_York\"}, {\"label\": \"Portland, OR\", \"latitude\": 45.5152, \"longitude\": -122.6784, \"timezone\": \"America/Los_Angeles\"}]}"
+    },
+    {
+      "role": "assistant",
+      "content": "I need to clarify which Portland you mean, as there are two major cities with that name in the U.S.: Portland, ME and Portland, OR. Please specify which one you are referring to."
+    },
+    {
+      "role": "user",
+      "content": "Finish by calling the final_answer tool."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "chatcmpl-tool-b1ad307e24a79211",
+          "type": "function",
+          "function": {
+            "name": "ask_user",
+            "arguments": "{\"question\": \"Please specify which Portland you mean: Portland, ME or Portland, OR?\"}"
+          }
+        }
+      ]
+    }
+  ]
+}

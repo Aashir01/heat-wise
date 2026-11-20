@@ -1,0 +1,80 @@
+{
+  "captured_at": "2026-11-20T11:37:50+00:00",
+  "balance_before": 962780,
+  "balance_after": 962780,
+  "rest_status_of_mcp_env_activity": {
+    "http_status": 200,
+    "status": "Completed"
+  },
+  "mcp_reads": [
+    {
+      "tool": "heatmap_read",
+      "arguments": {
+        "activity_id": "0be78e2c-aaac-438f-bd55-d0dc1fc3ba9d"
+      },
+      "is_error": false,
+      "elapsed_s": 9.1,
+      "envelope": {
+        "ok": true,
+        "result": {
+          "tool": "heatmap_read",
+          "value": {
+            "status": "completed",
+            "heatmap_id": "0be78e2c-aaac-438f-bd55-d0dc1fc3ba9d",
+            "temperature_unit": "celsius",
+            "stats": {
+              "temperature_stats": {
+                "minimum_celsius": 19.0663,
+                "maximum_celsius": 19.3131,
+                "mean_celsius": 19.185358333333333,
+                "standard_deviation_celsius": 0.07785159545887918
+              }
+            },
+            "mean_temperature_celsius": 19.185358333333333
+          },
+          "heatmap_id": "0be78e2c-aaac-438f-bd55-d0dc1fc3ba9d",
+          "activity_id": "0be78e2c-aaac-438f-bd55-d0dc1fc3ba9d",
+          "evidence": [],
+          "warnings": []
+        },
+        "trace": {
+          "trace_id": "c3e586245be8",
+          "tool": "heatmap_read",
+          "plan_type": "premium",
+          "decision": "allow",
+          "status": "ok",
+          "latency_ms": 1522,
+          "cost_credits": 0
+        }
+      }
+    },
+    {
+      "tool": "heatmap_read",
+      "arguments": {
+        "activity_id": "b3ff08c0-06f6-42c7-af7b-73773381aa4b"
+      },
+      "is_error": true,
+      "elapsed_s": 3.51,
+      "envelope": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "message": "The request input is invalid.",
+          "retriable": false,
+          "code": "invalid_input",
+          "field": "activity_id"
+        },
+        "trace": {
+          "trace_id": "f586b956f758",
+          "tool": "heatmap_read",
+          "plan_type": "premium",
+          "decision": "allow",
+          "status": "error",
+          "latency_ms": 1190,
+          "error": "invalid_input"
+        },
+        "message": "The request input is invalid."
+      }
+    }
+  ]
+}

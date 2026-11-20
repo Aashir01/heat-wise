@@ -1,0 +1,704 @@
+{
+  "captured_at": "2026-11-20T11:47:07+00:00",
+  "n_per_series": 30,
+  "series": {
+    "rest_status_completed": [
+      {
+        "i": 0,
+        "ms": 3039.7,
+        "status": 200,
+        "remaining": "999"
+      },
+      {
+        "i": 1,
+        "ms": 1124.9,
+        "status": 200,
+        "remaining": "998"
+      },
+      {
+        "i": 2,
+        "ms": 1277.9,
+        "status": 200,
+        "remaining": "997"
+      },
+      {
+        "i": 3,
+        "ms": 1447.7,
+        "status": 200,
+        "remaining": "996"
+      },
+      {
+        "i": 4,
+        "ms": 1243.9,
+        "status": 200,
+        "remaining": "999"
+      },
+      {
+        "i": 5,
+        "ms": 1888.3,
+        "status": 200,
+        "remaining": "998"
+      },
+      {
+        "i": 6,
+        "ms": 1403.8,
+        "status": 200,
+        "remaining": "997"
+      },
+      {
+        "i": 7,
+        "ms": 1217.1,
+        "status": 200,
+        "remaining": "996"
+      },
+      {
+        "i": 8,
+        "ms": 1437.5,
+        "status": 200,
+        "remaining": "995"
+      },
+      {
+        "i": 9,
+        "ms": 988.0,
+        "status": 200,
+        "remaining": "994"
+      },
+      {
+        "i": 10,
+        "ms": 1407.0,
+        "status": 200,
+        "remaining": "993"
+      },
+      {
+        "i": 11,
+        "ms": 1210.0,
+        "status": 200,
+        "remaining": "992"
+      },
+      {
+        "i": 12,
+        "ms": 843.4,
+        "status": 200,
+        "remaining": "991"
+      },
+      {
+        "i": 13,
+        "ms": 1427.6,
+        "status": 200,
+        "remaining": "990"
+      },
+      {
+        "i": 14,
+        "ms": 1121.0,
+        "status": 200,
+        "remaining": "989"
+      },
+      {
+        "i": 15,
+        "ms": 888.9,
+        "status": 200,
+        "remaining": "988"
+      },
+      {
+        "i": 16,
+        "ms": 1215.7,
+        "status": 200,
+        "remaining": "987"
+      },
+      {
+        "i": 17,
+        "ms": 1277.3,
+        "status": 200,
+        "remaining": "986"
+      },
+      {
+        "i": 18,
+        "ms": 1174.5,
+        "status": 200,
+        "remaining": "985"
+      },
+      {
+        "i": 19,
+        "ms": 912.3,
+        "status": 200,
+        "remaining": "984"
+      },
+      {
+        "i": 20,
+        "ms": 1103.5,
+        "status": 200,
+        "remaining": "983"
+      },
+      {
+        "i": 21,
+        "ms": 834.6,
+        "status": 200,
+        "remaining": "982"
+      },
+      {
+        "i": 22,
+        "ms": 1134.3,
+        "status": 200,
+        "remaining": "981"
+      },
+      {
+        "i": 23,
+        "ms": 936.8,
+        "status": 200,
+        "remaining": "980"
+      },
+      {
+        "i": 24,
+        "ms": 1034.6,
+        "status": 200,
+        "remaining": "979"
+      },
+      {
+        "i": 25,
+        "ms": 1014.1,
+        "status": 200,
+        "remaining": "978"
+      },
+      {
+        "i": 26,
+        "ms": 909.0,
+        "status": 200,
+        "remaining": "977"
+      },
+      {
+        "i": 27,
+        "ms": 1343.2,
+        "status": 200,
+        "remaining": "976"
+      },
+      {
+        "i": 28,
+        "ms": 1137.9,
+        "status": 200,
+        "remaining": "975"
+      },
+      {
+        "i": 29,
+        "ms": 898.2,
+        "status": 200,
+        "remaining": "974"
+      }
+    ],
+    "rest_rejected_422": [
+      {
+        "i": 0,
+        "ms": 753.7,
+        "status": 422,
+        "remaining": "299"
+      },
+      {
+        "i": 1,
+        "ms": 1040.7,
+        "status": 422,
+        "remaining": "298"
+      },
+      {
+        "i": 2,
+        "ms": 830.0,
+        "status": 422,
+        "remaining": "297"
+      },
+      {
+        "i": 3,
+        "ms": 1578.8,
+        "status": 422,
+        "remaining": "296"
+      },
+      {
+        "i": 4,
+        "ms": 614.8,
+        "status": 422,
+        "remaining": "295"
+      },
+      {
+        "i": 5,
+        "ms": 755.2,
+        "status": 422,
+        "remaining": "294"
+      },
+      {
+        "i": 6,
+        "ms": 726.9,
+        "status": 422,
+        "remaining": "293"
+      },
+      {
+        "i": 7,
+        "ms": 723.5,
+        "status": 422,
+        "remaining": "292"
+      },
+      {
+        "i": 8,
+        "ms": 958.0,
+        "status": 422,
+        "remaining": "291"
+      },
+      {
+        "i": 9,
+        "ms": 682.6,
+        "status": 422,
+        "remaining": "290"
+      },
+      {
+        "i": 10,
+        "ms": 575.6,
+        "status": 422,
+        "remaining": "289"
+      },
+      {
+        "i": 11,
+        "ms": 1092.6,
+        "status": 422,
+        "remaining": "288"
+      },
+      {
+        "i": 12,
+        "ms": 1141.0,
+        "status": 422,
+        "remaining": "287"
+      },
+      {
+        "i": 13,
+        "ms": 825.1,
+        "status": 422,
+        "remaining": "286"
+      },
+      {
+        "i": 14,
+        "ms": 700.6,
+        "status": 422,
+        "remaining": "285"
+      },
+      {
+        "i": 15,
+        "ms": 830.1,
+        "status": 422,
+        "remaining": "284"
+      },
+      {
+        "i": 16,
+        "ms": 735.8,
+        "status": 422,
+        "remaining": "283"
+      },
+      {
+        "i": 17,
+        "ms": 867.3,
+        "status": 422,
+        "remaining": "282"
+      },
+      {
+        "i": 18,
+        "ms": 895.1,
+        "status": 422,
+        "remaining": "281"
+      },
+      {
+        "i": 19,
+        "ms": 749.8,
+        "status": 422,
+        "remaining": "280"
+      },
+      {
+        "i": 20,
+        "ms": 862.6,
+        "status": 422,
+        "remaining": "279"
+      },
+      {
+        "i": 21,
+        "ms": 873.7,
+        "status": 422,
+        "remaining": "278"
+      },
+      {
+        "i": 22,
+        "ms": 862.2,
+        "status": 422,
+        "remaining": "277"
+      },
+      {
+        "i": 23,
+        "ms": 433.5,
+        "status": 422,
+        "remaining": "276"
+      },
+      {
+        "i": 24,
+        "ms": 827.7,
+        "status": 422,
+        "remaining": "275"
+      },
+      {
+        "i": 25,
+        "ms": 882.1,
+        "status": 422,
+        "remaining": "274"
+      },
+      {
+        "i": 26,
+        "ms": 900.2,
+        "status": 422,
+        "remaining": "273"
+      },
+      {
+        "i": 27,
+        "ms": 778.9,
+        "status": 422,
+        "remaining": "272"
+      },
+      {
+        "i": 28,
+        "ms": 512.4,
+        "status": 422,
+        "remaining": "271"
+      },
+      {
+        "i": 29,
+        "ms": 803.7,
+        "status": 422,
+        "remaining": "270"
+      }
+    ],
+    "mcp_credit_balance_warm": [
+      {
+        "i": 0,
+        "ms": 8225.1,
+        "is_error": false,
+        "server_latency_ms": 1764
+      },
+      {
+        "i": 1,
+        "ms": 3150.4,
+        "is_error": false,
+        "server_latency_ms": 846
+      },
+      {
+        "i": 2,
+        "ms": 2830.5,
+        "is_error": false,
+        "server_latency_ms": 451
+      },
+      {
+        "i": 3,
+        "ms": 5696.9,
+        "is_error": false,
+        "server_latency_ms": 3210
+      },
+      {
+        "i": 4,
+        "ms": 3083.2,
+        "is_error": false,
+        "server_latency_ms": 457
+      },
+      {
+        "i": 5,
+        "ms": 1906.8,
+        "is_error": false,
+        "server_latency_ms": 493
+      },
+      {
+        "i": 6,
+        "ms": 4823.2,
+        "is_error": false,
+        "server_latency_ms": 2675
+      },
+      {
+        "i": 7,
+        "ms": 3937.1,
+        "is_error": false,
+        "server_latency_ms": 1655
+      },
+      {
+        "i": 8,
+        "ms": 3043.0,
+        "is_error": false,
+        "server_latency_ms": 1707
+      },
+      {
+        "i": 9,
+        "ms": 2928.9,
+        "is_error": false,
+        "server_latency_ms": 1118
+      },
+      {
+        "i": 10,
+        "ms": 4097.9,
+        "is_error": false,
+        "server_latency_ms": 1482
+      },
+      {
+        "i": 11,
+        "ms": 3370.2,
+        "is_error": false,
+        "server_latency_ms": 1174
+      },
+      {
+        "i": 12,
+        "ms": 3428.2,
+        "is_error": false,
+        "server_latency_ms": 1205
+      },
+      {
+        "i": 13,
+        "ms": 5552.0,
+        "is_error": false,
+        "server_latency_ms": 1786
+      },
+      {
+        "i": 14,
+        "ms": 3144.8,
+        "is_error": false,
+        "server_latency_ms": 1444
+      },
+      {
+        "i": 15,
+        "ms": 3126.3,
+        "is_error": false,
+        "server_latency_ms": 1774
+      },
+      {
+        "i": 16,
+        "ms": 4560.5,
+        "is_error": false,
+        "server_latency_ms": 3165
+      },
+      {
+        "i": 17,
+        "ms": 3387.1,
+        "is_error": false,
+        "server_latency_ms": 1491
+      },
+      {
+        "i": 18,
+        "ms": 3162.7,
+        "is_error": false,
+        "server_latency_ms": 1881
+      },
+      {
+        "i": 19,
+        "ms": 3263.2,
+        "is_error": false,
+        "server_latency_ms": 1554
+      },
+      {
+        "i": 20,
+        "ms": 3127.2,
+        "is_error": false,
+        "server_latency_ms": 1468
+      },
+      {
+        "i": 21,
+        "ms": 3633.4,
+        "is_error": false,
+        "server_latency_ms": 1581
+      },
+      {
+        "i": 22,
+        "ms": 3422.8,
+        "is_error": false,
+        "server_latency_ms": 1429
+      },
+      {
+        "i": 23,
+        "ms": 3021.7,
+        "is_error": false,
+        "server_latency_ms": 877
+      },
+      {
+        "i": 24,
+        "ms": 4002.1,
+        "is_error": false,
+        "server_latency_ms": 1834
+      },
+      {
+        "i": 25,
+        "ms": 3462.5,
+        "is_error": false,
+        "server_latency_ms": 947
+      },
+      {
+        "i": 26,
+        "ms": 3921.3,
+        "is_error": false,
+        "server_latency_ms": 1646
+      },
+      {
+        "i": 27,
+        "ms": 3488.4,
+        "is_error": false,
+        "server_latency_ms": 1632
+      },
+      {
+        "i": 28,
+        "ms": 3900.9,
+        "is_error": false,
+        "server_latency_ms": 1586
+      },
+      {
+        "i": 29,
+        "ms": 2885.9,
+        "is_error": false,
+        "server_latency_ms": 908
+      }
+    ],
+    "mcp_list_tools_warm": [
+      {
+        "i": 0,
+        "ms": 3037.8,
+        "n_tools": 11
+      },
+      {
+        "i": 1,
+        "ms": 1937.9,
+        "n_tools": 11
+      },
+      {
+        "i": 2,
+        "ms": 2137.2,
+        "n_tools": 11
+      },
+      {
+        "i": 3,
+        "ms": 2217.3,
+        "n_tools": 11
+      },
+      {
+        "i": 4,
+        "ms": 4010.5,
+        "n_tools": 11
+      },
+      {
+        "i": 5,
+        "ms": 2938.4,
+        "n_tools": 11
+      },
+      {
+        "i": 6,
+        "ms": 2090.7,
+        "n_tools": 11
+      },
+      {
+        "i": 7,
+        "ms": 3079.3,
+        "n_tools": 11
+      },
+      {
+        "i": 8,
+        "ms": 2468.6,
+        "n_tools": 11
+      },
+      {
+        "i": 9,
+        "ms": 2552.5,
+        "n_tools": 11
+      },
+      {
+        "i": 10,
+        "ms": 2144.8,
+        "n_tools": 11
+      },
+      {
+        "i": 11,
+        "ms": 2900.5,
+        "n_tools": 11
+      },
+      {
+        "i": 12,
+        "ms": 4198.2,
+        "n_tools": 11
+      },
+      {
+        "i": 13,
+        "ms": 2067.0,
+        "n_tools": 11
+      },
+      {
+        "i": 14,
+        "ms": 1953.5,
+        "n_tools": 11
+      },
+      {
+        "i": 15,
+        "ms": 2033.0,
+        "n_tools": 11
+      },
+      {
+        "i": 16,
+        "ms": 2697.2,
+        "n_tools": 11
+      },
+      {
+        "i": 17,
+        "ms": 2794.8,
+        "n_tools": 11
+      },
+      {
+        "i": 18,
+        "ms": 2299.9,
+        "n_tools": 11
+      },
+      {
+        "i": 19,
+        "ms": 2598.1,
+        "n_tools": 11
+      },
+      {
+        "i": 20,
+        "ms": 2099.0,
+        "n_tools": 11
+      },
+      {
+        "i": 21,
+        "ms": 2187.8,
+        "n_tools": 11
+      },
+      {
+        "i": 22,
+        "ms": 2428.1,
+        "n_tools": 11
+      },
+      {
+        "i": 23,
+        "ms": 2150.7,
+        "n_tools": 11
+      },
+      {
+        "i": 24,
+        "ms": 2250.3,
+        "n_tools": 11
+      },
+      {
+        "i": 25,
+        "ms": 2551.7,
+        "n_tools": 11
+      },
+      {
+        "i": 26,
+        "ms": 2508.6,
+        "n_tools": 11
+      },
+      {
+        "i": 27,
+        "ms": 2234.1,
+        "n_tools": 11
+      },
+      {
+        "i": 28,
+        "ms": 2219.6,
+        "n_tools": 11
+      },
+      {
+        "i": 29,
+        "ms": 2730.4,
+        "n_tools": 11
+      }
+    ]
+  }
+}

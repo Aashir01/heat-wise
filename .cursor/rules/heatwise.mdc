@@ -1,0 +1,10 @@
+---
+description: heatwise repo rules (FortyGuard MCP agent)
+alwaysApply: true
+---
+
+Follow `AGENTS.md` in the repo root. Key rules:
+- Never print, log or commit `TEMP_API_KEY` or `NEBIUS_API_KEY`.
+- Do not invent FortyGuard endpoints, tool names or response shapes; use `docs/DISCOVERY.md` and real fixtures.
+- Paid calls cost credits; respect `results/spend_ledger.jsonl` and the cap. Never overwrite `results/raw/`.
+- Tests stay offline (respx, MockProvider, fake MCP session).

@@ -1,0 +1,47 @@
+{
+  "run": "20261120T115352Z",
+  "group": 1,
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "questions": [
+    {
+      "id": "q04_multi_city",
+      "status": "error",
+      "grade": {
+        "pass": false,
+        "failures": [
+          "status error not in ['answered']",
+          "0 successful paid calls, expected 2-2"
+        ],
+        "tools_called": [
+          "resolve_city",
+          "resolve_city",
+          "env_params"
+        ],
+        "successful_paid_calls": 0,
+        "blocked_invented_temperature": 0,
+        "rejected_final_answers": 0,
+        "failed_tool_calls": [
+          "env_params: ambiguous_failure: The call to env_params failed in transit (MCPError) and may have been charged. Not retried automatically."
+        ],
+        "ambiguous_failures": [
+          "env_params"
+        ]
+      },
+      "credits_spent": 0,
+      "elapsed_s": 24.7,
+      "network_check": {
+        "ok": true,
+        "notes": [
+          "ok",
+          "ok",
+          "ok"
+        ]
+      }
+    }
+  ],
+  "balance_before": 958560,
+  "balance_after": 955660,
+  "charged_by_balance": 2900,
+  "charged_by_ledger": 2900,
+  "stop_reason": "q04_multi_city: charged-or-uncertain failure with a healthy network"
+}

@@ -1,0 +1,9 @@
+{
+ "error": false,
+ "status_code": 200,
+ "message": "Processing",
+ "data": {
+  "activity_id": "64da6603-b60c-4e9c-9c72-dd55291f3feb",
+  "status": "Processing"
+ }
+}

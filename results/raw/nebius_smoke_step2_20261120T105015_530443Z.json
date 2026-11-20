@@ -1,0 +1,44 @@
+{
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "response": {
+    "id": "chatcmpl-9dcc9a6866344531",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "The apparent temperature in Austin (latitude 30.27, longitude -97.74) is 27.5°C.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null
+        },
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "created": 1795171814,
+    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-v0.22.0-tp4-cabd8c1a",
+    "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 243,
+      "total_tokens": 274,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-11-20T10:57:24+00:00",
+  "case": "invalid bearer [REDACTED] on initialize (unwrapped)",
+  "leaf_exceptions": [
+    {
+      "type": "MCPError",
+      "str": "Server returned an error response"
+    }
+  ]
+}

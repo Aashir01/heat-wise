@@ -1,0 +1,115 @@
+{
+  "captured_at": "2026-11-20T12:36:31+00:00",
+  "request": {
+    "method": "GET",
+    "url": "https://api.fortyguard.com/v1/status/5a0678e6-9d9c-4b5e-bf91-ae09340d2669",
+    "headers": {
+      "api-key": "[REDACTED]",
+      "Content-Type": "application/json"
+    },
+    "body": null
+  },
+  "response": {
+    "status_code": 200,
+    "elapsed_seconds": 5.164,
+    "headers": {
+      "server": "envoy",
+      "date": "Fri, 20 Nov 2026 12:36:30 GMT",
+      "content-type": "application/json",
+      "x-ratelimit-limit": "1000",
+      "x-ratelimit-remaining": "999",
+      "x-ratelimit-reset": "1795178220",
+      "x-envoy-upstream-service-time": "4089",
+      "content-encoding": "gzip",
+      "vary": "Accept-Encoding",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "error": false,
+      "status_code": 200,
+      "message": "Completed",
+      "data": {
+        "activity_id": "5a0678e6-9d9c-4b5e-bf91-ae09340d2669",
+        "status": "Completed",
+        "result": {
+          "metadata": {
+            "timezone": "America/New_York",
+            "timezone_offset_hours": -5,
+            "time_range": {
+              "start": "2026-11-17T14:00:00-05:00",
+              "end": "2026-11-17T14:00:00-05:00",
+              "interval": "1h",
+              "count": 1
+            },
+            "timestamps": [
+              "2026-11-17T14:00:00-05:00"
+            ]
+          },
+          "locations": [
+            {
+              "lat": 40.7128,
+              "lon": -74.006,
+              "elevation": 32.0,
+              "temperature": 35.0,
+              "parameters": {
+                "heat_index_celsius": [
+                  41.0
+                ],
+                "apparent_temperature_celsius": [
+                  10.8
+                ],
+                "relative_humidity_percent": [
+                  50.9
+                ],
+                "precipitation_mm": [
+                  0.0
+                ],
+                "cloud_cover_octas": [
+                  0
+                ],
+                "wet_bulb_temperature_celsius": [
+                  8.0
+                ],
+                "air_quality:idx": [
+                  55.4
+                ],
+                "air_quality_pm2p5:idx": [
+                  55.4
+                ],
+                "air_quality_pm10:idx": [
+                  11.1
+                ],
+                "air_quality_no2:idx": [
+                  10.4
+                ],
+                "aqi_us_co": [
+                  2.3
+                ],
+                "air_quality_o3:idx": [
+                  12.5
+                ],
+                "air_quality_so2:idx": [
+                  1.4
+                ],
+                "methane_ppb": [
+                  2109.0
+                ],
+                "co2_ppm": [
+                  470.0
+                ]
+              },
+              "solar_irradiance": {
+                "clear_sky": {
+                  "ghi": 348.2,
+                  "dni": 784.61,
+                  "dhi": 53.6
+                },
+                "description": "These modeled clear-sky irradiance estimates in W/m² describe the specific location at 2026-11-17 14:00. GHI is global horizontal irradiance, DNI is direct normal irradiance, and DHI is diffuse horizontal irradiance."
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

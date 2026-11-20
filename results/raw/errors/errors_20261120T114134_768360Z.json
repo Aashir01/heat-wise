@@ -1,0 +1,1015 @@
+{
+  "captured_at": "2026-11-20T11:41:34+00:00",
+  "balance_before": 962780,
+  "balance_after": 962780,
+  "credits_charged": 0,
+  "actionable_rule": "(?i)latitude|longitude|temperature|date_time|start_date|end_date|filter_type|start_time|polygon|api.?key|authori[sz]ation|field|must|between|format|YYYY|range|limit|supported|earliest|future|required|missing|not allowed|outside|United States",
+  "cases": [
+    {
+      "id": "rest_missing_key",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "status_code": 401,
+      "elapsed_ms": 1291.4,
+      "body_shape": "details,error,status_code",
+      "code": null,
+      "field": null,
+      "message": "Missing required 'api-key' header. Send your key in the 'api-key' request header.",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 401,
+        "details": {
+          "message": "Missing required 'api-key' header. Send your key in the 'api-key' request header."
+        }
+      }
+    },
+    {
+      "id": "rest_invalid_key",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "status_code": 401,
+      "elapsed_ms": 1110.7,
+      "body_shape": "details,error,status_code",
+      "code": null,
+      "field": null,
+      "message": "Invalid or unknown API key.",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 401,
+        "details": {
+          "message": "Invalid or unknown API key."
+        }
+      }
+    },
+    {
+      "id": "rest_malformed_json",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": "{\"latitude\": 33.4,"
+      },
+      "status_code": 422,
+      "elapsed_ms": 1472.1,
+      "body_shape": "detail,error,field,message,status_code",
+      "code": null,
+      "field": "18",
+      "message": "Field '18' is invalid: JSON decode error",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 422,
+        "message": "Field '18' is invalid: JSON decode error",
+        "field": "18",
+        "detail": [
+          {
+            "type": "json_invalid",
+            "loc": [
+              "body",
+              18
+            ],
+            "msg": "JSON decode error",
+            "input": {},
+            "ctx": {
+              "error": "Expecting property name enclosed in double quotes"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "rest_missing_temperature",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "status_code": 422,
+      "elapsed_ms": 3282.6,
+      "body_shape": "detail,error,field,message,status_code",
+      "code": null,
+      "field": "temperature",
+      "message": "Field 'temperature' is required.",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 422,
+        "message": "Field 'temperature' is required.",
+        "field": "temperature",
+        "detail": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "temperature"
+            ],
+            "msg": "Field required",
+            "input": {
+              "latitude": 33.4484,
+              "longitude": -112.074,
+              "date_time": {
+                "start_date": "2026-11-17",
+                "start_time": "14:00",
+                "filter_type": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "rest_latitude_out_of_range",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 200,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "status_code": 422,
+      "elapsed_ms": 1308.8,
+      "body_shape": "detail,error,field,message,status_code",
+      "code": null,
+      "field": "latitude",
+      "message": "Field 'latitude' is invalid: Input should be less than or equal to 90",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 422,
+        "message": "Field 'latitude' is invalid: Input should be less than or equal to 90",
+        "field": "latitude",
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "body",
+              "latitude"
+            ],
+            "msg": "Input should be less than or equal to 90",
+            "input": 200,
+            "ctx": {
+              "le": 90.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "rest_temperature_as_string",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": "hot",
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "status_code": 422,
+      "elapsed_ms": 1250.4,
+      "body_shape": "detail,error,field,message,status_code",
+      "code": null,
+      "field": "temperature",
+      "message": "Field 'temperature' is invalid: Input should be a valid number, unable to parse string as a number",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 422,
+        "message": "Field 'temperature' is invalid: Input should be a valid number, unable to parse string as a number",
+        "field": "temperature",
+        "detail": [
+          {
+            "type": "float_parsing",
+            "loc": [
+              "body",
+              "temperature"
+            ],
+            "msg": "Input should be a valid number, unable to parse string as a number",
+            "input": "hot"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rest_bad_filter_type",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 7
+          }
+        }
+      },
+      "status_code": 422,
+      "elapsed_ms": 1482.2,
+      "body_shape": "detail,error,field,message,status_code",
+      "code": null,
+      "field": "date_time.filter_type",
+      "message": "Field 'date_time.filter_type' is invalid: Input should be 1, 2, 3 or 4",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 422,
+        "message": "Field 'date_time.filter_type' is invalid: Input should be 1, 2, 3 or 4",
+        "field": "date_time.filter_type",
+        "detail": [
+          {
+            "type": "literal_error",
+            "loc": [
+              "body",
+              "date_time",
+              "filter_type"
+            ],
+            "msg": "Input should be 1, 2, 3 or 4",
+            "input": 7,
+            "ctx": {
+              "expected": "1, 2, 3 or 4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "rest_bad_date_format",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "17/11/2026",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "status_code": 500,
+      "elapsed_ms": 1703.8,
+      "body_shape": "error,message",
+      "code": null,
+      "field": null,
+      "message": "Something went wrong on our side. Please try again in a moment, or contact support@fortyguard.com if it keeps failing.",
+      "actionable": false,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "message": "Something went wrong on our side. Please try again in a moment, or contact support@fortyguard.com if it keeps failing."
+      }
+    },
+    {
+      "id": "rest_missing_start_time_for_single_hour",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "filter_type": 1
+          }
+        }
+      },
+      "status_code": 500,
+      "elapsed_ms": 4155.4,
+      "body_shape": "error,message",
+      "code": null,
+      "field": null,
+      "message": "Something went wrong on our side. Please try again in a moment, or contact support@fortyguard.com if it keeps failing.",
+      "actionable": false,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "message": "Something went wrong on our side. Please try again in a moment, or contact support@fortyguard.com if it keeps failing."
+      }
+    },
+    {
+      "id": "rest_future_date",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2027-01-01",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "status_code": 400,
+      "elapsed_ms": 1512.3,
+      "body_shape": "code,error,field,message,status_code",
+      "code": "NO_COVERAGE",
+      "field": "date_time.start_date",
+      "message": "Field 'date_time.start_date' (2027-01-01) is in the future. Requests must be for a past or present date.",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 400,
+        "message": "Field 'date_time.start_date' (2027-01-01) is in the future. Requests must be for a past or present date.",
+        "field": "date_time.start_date",
+        "code": "NO_COVERAGE"
+      }
+    },
+    {
+      "id": "rest_non_us_london",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 51.5074,
+          "longitude": -0.1278,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "status_code": 400,
+      "elapsed_ms": 1117.6,
+      "body_shape": "code,error,field,message,status_code",
+      "code": "OUT_OF_COVERAGE",
+      "field": "latitude",
+      "message": "FortyGuard currently provides data only for supported regions within the United States. The requested location is outside supported U.S. coverage. Availability within the United States also depends on the tool, location, date, and data source.",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 2900,
+      "body": {
+        "error": true,
+        "status_code": 400,
+        "message": "FortyGuard currently provides data only for supported regions within the United States. The requested location is outside supported U.S. coverage. Availability within the United States also depends on the tool, location, date, and data source.",
+        "field": "latitude",
+        "code": "OUT_OF_COVERAGE"
+      }
+    },
+    {
+      "id": "rest_huge_range_days",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/env_params",
+        "body": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2021-01-01",
+            "end_date": "2026-11-01",
+            "filter_type": 4
+          }
+        }
+      },
+      "status_code": 500,
+      "elapsed_ms": 1940.8,
+      "body_shape": "error,message",
+      "code": null,
+      "field": null,
+      "message": "Something went wrong on our side. Please try again in a moment, or contact support@fortyguard.com if it keeps failing.",
+      "actionable": false,
+      "accepted": false,
+      "may_charge": 2900,
+      "body": {
+        "error": true,
+        "message": "Something went wrong on our side. Please try again in a moment, or contact support@fortyguard.com if it keeps failing."
+      }
+    },
+    {
+      "id": "rest_heatmap_huge_polygon",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/heatmap",
+        "body": {
+          "polygon_aoi": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -113.0,
+                  33.0
+                ],
+                [
+                  -111.0,
+                  33.0
+                ],
+                [
+                  -111.0,
+                  34.0
+                ],
+                [
+                  -113.0,
+                  34.0
+                ],
+                [
+                  -113.0,
+                  33.0
+                ]
+              ]
+            ]
+          },
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 1
+          },
+          "granularity": 100
+        }
+      },
+      "status_code": 400,
+      "elapsed_ms": 1552.7,
+      "body_shape": "error,message",
+      "code": null,
+      "field": null,
+      "message": "Heatmap size exceeds current model limit of 50 mi² /129.5 km²",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 4220,
+      "body": {
+        "error": true,
+        "message": "Heatmap size exceeds current model limit of 50 mi² /129.5 km²"
+      }
+    },
+    {
+      "id": "rest_unknown_endpoint",
+      "surface": "rest",
+      "request": {
+        "method": "POST",
+        "path": "/not_an_endpoint",
+        "body": {}
+      },
+      "status_code": 404,
+      "elapsed_ms": 1131.2,
+      "body_shape": "details,error,status_code",
+      "code": null,
+      "field": null,
+      "message": "Endpoint not found",
+      "actionable": false,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 404,
+        "details": {
+          "message": "Endpoint not found"
+        }
+      }
+    },
+    {
+      "id": "rest_wrong_method",
+      "surface": "rest",
+      "request": {
+        "method": "GET",
+        "path": "/env_params",
+        "body": null
+      },
+      "status_code": 405,
+      "elapsed_ms": 1342.2,
+      "body_shape": "detail",
+      "code": null,
+      "field": null,
+      "message": "Method Not Allowed",
+      "actionable": true,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "detail": "Method Not Allowed"
+      }
+    },
+    {
+      "id": "rest_status_unknown_activity",
+      "surface": "rest",
+      "request": {
+        "method": "GET",
+        "path": "/status/00000000-0000-0000-0000-000000000000",
+        "body": null
+      },
+      "status_code": 404,
+      "elapsed_ms": 1597.6,
+      "body_shape": "details,error,status_code",
+      "code": null,
+      "field": null,
+      "message": "No activity found for the provided activity_id.",
+      "actionable": false,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 404,
+        "details": {
+          "message": "No activity found for the provided activity_id."
+        }
+      }
+    },
+    {
+      "id": "rest_status_garbage_id",
+      "surface": "rest",
+      "request": {
+        "method": "GET",
+        "path": "/status/not-a-uuid",
+        "body": null
+      },
+      "status_code": 404,
+      "elapsed_ms": 1499.9,
+      "body_shape": "details,error,status_code",
+      "code": null,
+      "field": null,
+      "message": "No activity found for the provided activity_id.",
+      "actionable": false,
+      "accepted": false,
+      "may_charge": 0,
+      "body": {
+        "error": true,
+        "status_code": 404,
+        "details": {
+          "message": "No activity found for the provided activity_id."
+        }
+      }
+    },
+    {
+      "id": "mcp_missing_temperature",
+      "surface": "mcp",
+      "request": {
+        "tool": "env_params",
+        "arguments": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "may_charge": 0,
+      "is_error": true,
+      "body_shape": "error,message,ok,trace",
+      "code": null,
+      "field": "temperature",
+      "category": "invalid_input",
+      "retriable": false,
+      "message": "The request input is invalid.",
+      "actionable": false,
+      "accepted": false,
+      "cost_credits": null,
+      "body": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "message": "The request input is invalid.",
+          "retriable": false,
+          "field": "temperature"
+        },
+        "trace": {
+          "trace_id": "f57c884c2210",
+          "tool": "env_params",
+          "plan_type": "premium",
+          "decision": "allow",
+          "status": "error",
+          "latency_ms": 0,
+          "error": "invalid_input"
+        },
+        "message": "The request input is invalid."
+      },
+      "elapsed_ms": 3834.8
+    },
+    {
+      "id": "mcp_latitude_out_of_range",
+      "surface": "mcp",
+      "request": {
+        "tool": "env_params",
+        "arguments": {
+          "latitude": 200,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "may_charge": 0,
+      "is_error": true,
+      "body_shape": "error,message,ok,trace",
+      "code": null,
+      "field": "latitude",
+      "category": "invalid_input",
+      "retriable": false,
+      "message": "The request input is invalid.",
+      "actionable": false,
+      "accepted": false,
+      "cost_credits": null,
+      "body": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "message": "The request input is invalid.",
+          "retriable": false,
+          "field": "latitude"
+        },
+        "trace": {
+          "trace_id": "945b25dc5a45",
+          "tool": "env_params",
+          "plan_type": "premium",
+          "decision": "allow",
+          "status": "error",
+          "latency_ms": 0,
+          "error": "invalid_input"
+        },
+        "message": "The request input is invalid."
+      },
+      "elapsed_ms": 2495.6
+    },
+    {
+      "id": "mcp_bad_filter_type",
+      "surface": "mcp",
+      "request": {
+        "tool": "env_params",
+        "arguments": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 7
+          }
+        }
+      },
+      "may_charge": 0,
+      "is_error": true,
+      "body_shape": "error,message,ok,trace",
+      "code": null,
+      "field": "date_time.filter_type",
+      "category": "invalid_input",
+      "retriable": false,
+      "message": "The request input is invalid.",
+      "actionable": false,
+      "accepted": false,
+      "cost_credits": null,
+      "body": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "message": "The request input is invalid.",
+          "retriable": false,
+          "field": "date_time.filter_type"
+        },
+        "trace": {
+          "trace_id": "29a5acb019fc",
+          "tool": "env_params",
+          "plan_type": "premium",
+          "decision": "allow",
+          "status": "error",
+          "latency_ms": 0,
+          "error": "invalid_input"
+        },
+        "message": "The request input is invalid."
+      },
+      "elapsed_ms": 2901.6
+    },
+    {
+      "id": "mcp_bad_date_format",
+      "surface": "mcp",
+      "request": {
+        "tool": "env_params",
+        "arguments": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "17/11/2026",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "may_charge": 0,
+      "is_error": true,
+      "body_shape": "error,message,ok,trace",
+      "code": null,
+      "field": "date_time.start_date",
+      "category": "invalid_input",
+      "retriable": false,
+      "message": "The request input is invalid.",
+      "actionable": false,
+      "accepted": false,
+      "cost_credits": null,
+      "body": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "message": "The request input is invalid.",
+          "retriable": false,
+          "field": "date_time.start_date"
+        },
+        "trace": {
+          "trace_id": "78a931f29377",
+          "tool": "env_params",
+          "plan_type": "premium",
+          "decision": "allow",
+          "status": "error",
+          "latency_ms": 0,
+          "error": "invalid_input"
+        },
+        "message": "The request input is invalid."
+      },
+      "elapsed_ms": 2339.6
+    },
+    {
+      "id": "mcp_before_2021",
+      "surface": "mcp",
+      "request": {
+        "tool": "env_params",
+        "arguments": {
+          "latitude": 33.4484,
+          "longitude": -112.074,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2020-06-15",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "may_charge": 0,
+      "is_error": true,
+      "body_shape": "error,message,ok,trace",
+      "code": null,
+      "field": "date_time.start_date",
+      "category": "invalid_input",
+      "retriable": false,
+      "message": "start_date must be on or after 2021-01-01",
+      "actionable": true,
+      "accepted": false,
+      "cost_credits": null,
+      "body": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "message": "start_date must be on or after 2021-01-01",
+          "retriable": false,
+          "field": "date_time.start_date"
+        },
+        "trace": {
+          "trace_id": "afb42163f1e1",
+          "tool": "env_params",
+          "plan_type": "premium",
+          "decision": "allow",
+          "status": "error",
+          "latency_ms": 0,
+          "error": "invalid_input"
+        },
+        "message": "start_date must be on or after 2021-01-01"
+      },
+      "elapsed_ms": 2099.4
+    },
+    {
+      "id": "mcp_non_us_london",
+      "surface": "mcp",
+      "request": {
+        "tool": "env_params",
+        "arguments": {
+          "latitude": 51.5074,
+          "longitude": -0.1278,
+          "temperature": 20,
+          "date_time": {
+            "start_date": "2026-11-17",
+            "start_time": "14:00",
+            "filter_type": 1
+          }
+        }
+      },
+      "may_charge": 2900,
+      "is_error": true,
+      "body_shape": "error,message,ok,trace",
+      "code": "OUT_OF_COVERAGE",
+      "field": "latitude",
+      "category": "no_coverage",
+      "retriable": false,
+      "message": "FortyGuard currently provides data only for supported regions within the United States. The requested location is outside supported U.S. coverage. Availability within the United States also depends on the tool, location, date, and data source.",
+      "actionable": true,
+      "accepted": false,
+      "cost_credits": null,
+      "body": {
+        "ok": false,
+        "error": {
+          "category": "no_coverage",
+          "message": "FortyGuard currently provides data only for supported regions within the United States. The requested location is outside supported U.S. coverage. Availability within the United States also depends on the tool, location, date, and data source.",
+          "retriable": false,
+          "code": "OUT_OF_COVERAGE",
+          "field": "latitude"
+        },
+        "trace": {
+          "trace_id": "1ed0fead6d11",
+          "tool": "env_params",
+          "plan_type": "premium",
+          "decision": "allow",
+          "status": "error",
+          "latency_ms": 315,
+          "error": "no_coverage"
+        },
+        "message": "FortyGuard currently provides data only for supported regions within the United States. The requested location is outside supported U.S. coverage. Availability within the United States also depends on the tool, location, date, and data source."
+      },
+      "elapsed_ms": 2537.4
+    },
+    {
+      "id": "mcp_unknown_tool",
+      "surface": "mcp",
+      "request": {
+        "tool": "not_a_tool",
+        "arguments": {}
+      },
+      "may_charge": 0,
+      "is_error": true,
+      "body_shape": "str",
+      "code": null,
+      "field": null,
+      "category": null,
+      "retriable": null,
+      "message": "Unknown tool: 'not_a_tool'",
+      "actionable": false,
+      "accepted": false,
+      "cost_credits": null,
+      "body": "Unknown tool: 'not_a_tool'",
+      "elapsed_ms": 1952.9
+    },
+    {
+      "id": "mcp_heatmap_read_unknown_id",
+      "surface": "mcp",
+      "request": {
+        "tool": "heatmap_read",
+        "arguments": {
+          "activity_id": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "may_charge": 0,
+      "is_error": true,
+      "body_shape": "error,message,ok,trace",
+      "code": "ACTIVITY_UNAVAILABLE",
+      "field": null,
+      "category": "denied",
+      "retriable": false,
+      "message": "Activity not found or unavailable to this account. Check the activity ID and try again.",
+      "actionable": false,
+      "accepted": false,
+      "cost_credits": null,
+      "body": {
+        "ok": false,
+        "error": {
+          "category": "denied",
+          "message": "Activity not found or unavailable to this account. Check the activity ID and try again.",
+          "retriable": false,
+          "code": "ACTIVITY_UNAVAILABLE"
+        },
+        "trace": {
+          "trace_id": "871bcf6c5a5f",
+          "tool": "heatmap_read",
+          "plan_type": "premium",
+          "decision": "allow",
+          "status": "denied",
+          "latency_ms": 1337,
+          "error": "denied"
+        },
+        "message": "Activity not found or unavailable to this account. Check the activity ID and try again."
+      },
+      "elapsed_ms": 3870.6
+    },
+    {
+      "id": "mcp_routing_same_origin_destination",
+      "surface": "mcp",
+      "request": {
+        "tool": "temperature_routing",
+        "arguments": {
+          "origin": {
+            "lat": 33.4484,
+            "lon": -112.074
+          },
+          "destination": {
+            "lat": 33.4484,
+            "lon": -112.074
+          },
+          "departure_time": "2026-11-17T21:00:00Z"
+        }
+      },
+      "may_charge": 3500,
+      "is_error": true,
+      "body_shape": "error,message,ok,trace",
+      "code": null,
+      "field": null,
+      "category": "invalid_input",
+      "retriable": false,
+      "message": "The request input is invalid.",
+      "actionable": false,
+      "accepted": false,
+      "cost_credits": null,
+      "body": {
+        "ok": false,
+        "error": {
+          "category": "invalid_input",
+          "message": "The request input is invalid.",
+          "retriable": false
+        },
+        "trace": {
+          "trace_id": "51d13d360a52",
+          "tool": "temperature_routing",
+          "plan_type": "premium",
+          "decision": "allow",
+          "status": "error",
+          "latency_ms": 0,
+          "error": "invalid_input"
+        },
+        "message": "The request input is invalid."
+      },
+      "elapsed_ms": 1898.2
+    }
+  ]
+}

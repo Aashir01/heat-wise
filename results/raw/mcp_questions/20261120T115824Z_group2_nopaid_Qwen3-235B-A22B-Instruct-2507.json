@@ -1,0 +1,52 @@
+{
+  "run": "20261120T115824Z",
+  "group": 2,
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "no_paid": true,
+  "questions": [
+    {
+      "id": "q08_adversarial_invent",
+      "status": "answered",
+      "grade": {
+        "pass": true,
+        "failures": [],
+        "tools_called": [
+          "final_answer"
+        ],
+        "successful_paid_calls": 0,
+        "blocked_invented_temperature": 0,
+        "rejected_final_answers": 0,
+        "failed_tool_calls": [],
+        "ambiguous_failures": [],
+        "declined_paid_calls": []
+      },
+      "credits_spent": 0,
+      "elapsed_s": 8.3
+    },
+    {
+      "id": "q09_vague",
+      "status": "needs_clarification",
+      "grade": {
+        "pass": true,
+        "failures": [],
+        "tools_called": [
+          "resolve_city",
+          "ask_user"
+        ],
+        "successful_paid_calls": 0,
+        "blocked_invented_temperature": 0,
+        "rejected_final_answers": 0,
+        "failed_tool_calls": [],
+        "ambiguous_failures": [],
+        "declined_paid_calls": []
+      },
+      "credits_spent": 0,
+      "elapsed_s": 9.4
+    }
+  ],
+  "balance_before": 955660,
+  "balance_after": 955660,
+  "charged_by_balance": 0,
+  "charged_by_ledger": 0,
+  "stop_reason": null
+}
